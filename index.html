@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magnolia Urban Park — Exclusividad, Naturaleza & Vida Urbana</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo_arch_gold.png">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f4f7f4',
+              100: '#e3eae3',
+              500: '#2d5a3f',
+              600: '#234731',
+              700: '#1b3726',
+              800: '#14291c',
+              900: '#0e1c13',
+              accent: '#d4af37', // Gold accent
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- NAVEGACIÓN -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gray-950/70 backdrop-blur-md border-b border-white/10 py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      
+      <!-- LOGO OFICIAL EN NAVBAR (TRANSPARENTE HORIZONTAL) -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <img src="logo_arch_gold.png" alt="Magnolia Icon" class="h-10 w-auto object-contain transform group-hover:scale-105 transition-transform drop-shadow-[0_2px_10px_rgba(212,175,55,0.4)]">
+        <div class="flex flex-col justify-center">
+          <span class="text-xl font-bold tracking-[0.2em] text-white font-serif leading-none group-hover:text-brand-accent transition-colors">MAGNOLIA</span>
+          <span class="text-[9px] tracking-[0.35em] text-brand-accent uppercase font-semibold mt-1">RESIDENCIAL &bull; URBAN PARK</span>
+        </div>
+      </a>
+
+      <!-- MENU DESK -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <a href="#concepto" class="hover:text-brand-accent transition-colors">Concepto</a>
+        <a href="#estilodevida" class="hover:text-brand-accent transition-colors">Estilo de Vida</a>
+        <a href="#masterplan" class="hover:text-brand-accent transition-colors">Master Plan</a>
+        <a href="dossier.html" class="text-brand-accent hover:text-white font-semibold transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-book-open text-xs"></i> Dossier Técnico
+        </a>
+        <a href="#amenidades" class="hover:text-brand-accent transition-colors">Amenidades</a>
+        <a href="#galeria" class="hover:text-brand-accent transition-colors">Galería Renders</a>
+      </nav>
+
+      <!-- CTA DESK -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#contacto" class="px-5 py-2.5 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm shadow-lg shadow-brand-500/25 transition-all hover:shadow-brand-500/40 hover:-translate-y-0.5 flex items-center gap-2">
+          <i class="fa-solid fa-paper-plane text-xs"></i>
+          Solicitar Informes
+        </a>
+      </div>
+
+      <!-- BOTÓN MOBILE -->
+      <button id="mobileMenuBtn" class="md:hidden text-gray-300 hover:text-white p-2 text-xl" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- MENU MOBILE DESPLEGABLE -->
+    <div id="mobileMenu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-xl border-b border-white/10 px-6 py-6 space-y-4">
+      <a href="#concepto" class="block text-gray-300 hover:text-brand-accent font-medium py-1">Concepto</a>
+      <a href="#estilodevida" class="block text-gray-300 hover:text-brand-accent font-medium py-1">Estilo de Vida</a>
+      <a href="#masterplan" class="block text-gray-300 hover:text-brand-accent font-medium py-1">Master Plan</a>
+      <a href="#amenidades" class="block text-gray-300 hover:text-brand-accent font-medium py-1">Amenidades</a>
+      <a href="#galeria" class="block text-gray-300 hover:text-brand-accent font-medium py-1">Galería Renders</a>
+      <a href="#contacto" class="block text-center w-full py-3 rounded-xl bg-brand-500 text-white font-bold text-sm">Solicitar Informes</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    <!-- Imagen de fondo con overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="RM 6.jpg" alt="Magnolia Urban Park al Atardecer" class="w-full h-full object-cover object-center transform scale-105">
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/60 to-gray-950/40"></div>
+    </div>
+
+    <!-- Contenido Hero -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+      <!-- LOGO OFICIAL TRANSPARENTE EN HERO (SIN RECUADRO) -->
+      <div class="mb-6 hover:scale-105 transition-transform duration-500 max-w-xs sm:max-w-sm md:max-w-md">
+        <img src="logo_full_gold.png" alt="Magnolia Residencial Urban Park" class="h-40 sm:h-52 md:h-60 w-auto mx-auto object-contain filter drop-shadow-[0_15px_35px_rgba(0,0,0,0.95)]">
+      </div>
+
+
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-6">
+        Un Nuevo <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-emerald-300 to-green-400">Comportamiento Urbano</span>
+      </h1>
+
+      <p class="text-lg sm:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+        ¡Rompe con la Apatía Social! Conecta con espacios pensados para volver a lo verdaderamente importante.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#masterplan" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-brand-500 to-emerald-600 hover:from-brand-600 hover:to-emerald-700 text-white font-bold shadow-xl shadow-brand-500/30 hover:shadow-brand-500/50 transition-all hover:-translate-y-1 flex items-center justify-center gap-3">
+          <i class="fa-solid fa-map-location-dot"></i>
+          Explorar Master Plan
+        </a>
+        <a href="#galeria" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 font-semibold transition-all hover:-translate-y-1 flex items-center justify-center gap-3">
+          <i class="fa-solid fa-images"></i>
+          Ver Renders HD (8)
+        </a>
+      </div>
+
+      <!-- Stats rápidos -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-8 border-t border-white/10 text-left max-w-4xl mx-auto">
+        <div class="p-4 rounded-2xl bg-gray-900/40 backdrop-blur-sm border border-white/5">
+          <div class="text-2xl sm:text-3xl font-extrabold text-brand-accent">100%</div>
+          <div class="text-xs text-gray-400 mt-1">Empedrado Artesanal</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-gray-900/40 backdrop-blur-sm border border-white/5">
+          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">Trotapista</div>
+          <div class="text-xs text-gray-400 mt-1">Circuito Verde Integrado</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-gray-900/40 backdrop-blur-sm border border-white/5">
+          <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">Fire Pits</div>
+          <div class="text-xs text-gray-400 mt-1">Áreas Sociales Nocturnas</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-gray-900/40 backdrop-blur-sm border border-white/5">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white">Seguridad</div>
+          <div class="text-xs text-gray-400 mt-1">Acceso Controlado 24/7</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CONCEPTO -->
+  <section id="concepto" class="py-24 bg-gray-900/50 relative border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-brand-accent text-xs font-bold uppercase tracking-widest block mb-2">Filosofía Arquitectónica</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+            Un diseño que <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-emerald-300 to-green-400">abraza el paisaje natural</span>
+          </h2>
+          <p class="text-gray-300 text-base leading-relaxed mb-6">
+            <strong>Magnolia Urban Park</strong> reemplaza las calles convencionales por trazados orgánicos de piedra natural redondeada (*cobblestone*). Este diseño no solo reduce la velocidad vehicular para la seguridad familiar, sino que también favorece la absorción pluvial y preserva los árboles centenarios del terreno.
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-gray-800/40 border border-white/5">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-leaf text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-white">Respeto Topográfico</h3>
+                <p class="text-xs text-gray-400 mt-0.5">Integración armónica con las lomas suaves y vegetación nativa preexistente.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-gray-800/40 border border-white/5">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-road text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-white">Vialidades de Piedra Natural</h3>
+                <p class="text-xs text-gray-400 mt-0.5">Pavimento artesanal durable que aporta calidez visual y un carácter atemporal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-brand-accent rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+          <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+            <img src="RM 2.jpg" alt="Vistas panorámicas Magnolia Urban Park" class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <div class="text-xs font-semibold text-brand-accent uppercase tracking-wider">Perspectiva al Horizonte</div>
+              <div class="text-lg font-bold text-white mt-1">Conexión visual con valles y paisajes abiertos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN ESTILO DE VIDA -->
+  <section id="estilodevida" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-4xl mx-auto mb-16">
+        <span class="text-brand-accent text-xs sm:text-sm font-bold uppercase tracking-widest block mb-3">Bienestar & Deporte</span>
+        <h2 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-6">
+          Un espacio diseñado para <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-emerald-300 to-green-400">disfrutarse al aire libre</span>
+        </h2>
+        <p class="text-gray-300 text-base sm:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+          Camina, corre o anda en bicicleta en familia, a cualquier hora.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="rounded-3xl bg-gray-900/60 border border-white/10 overflow-hidden hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-2 group">
+          <div class="h-60 overflow-hidden relative">
+            <img src="RM 1.jpeg" alt="Trotapista Magnolia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-gray-950/80 backdrop-blur-md text-emerald-400 text-xs font-bold">Circuito Trotapista</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Circuitos de Running Integrados</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+              Pistas acondicionadas en tono terracota paralelas a las vialidades principales, protegidas con barreras de vegetación y luminarias nocturnas.
+            </p>
+            <span class="text-xs text-brand-accent font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-person-running"></i> Pavimento especial anti-impacto
+            </span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="rounded-3xl bg-gray-900/60 border border-white/10 overflow-hidden hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-2 group">
+          <div class="h-60 overflow-hidden relative">
+            <img src="RM 5.jpg" alt="Ciclovía y Áreas Verdes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-gray-950/80 backdrop-blur-md text-amber-400 text-xs font-bold">Movilidad Sustentable</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Ciclovías y Caminamientos</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+              Rutas seguras para bicicletas y peatones con retornos amplios y conexión fluida entre todas las etapas del parque urbano.
+            </p>
+            <span class="text-xs text-amber-400 font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-person-biking"></i> Tránsito pacificado y seguro
+            </span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="rounded-3xl bg-gray-900/60 border border-white/10 overflow-hidden hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-2 group">
+          <div class="h-60 overflow-hidden relative">
+            <img src="RM3.jpg" alt="Parque Infantil Magnolia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-gray-950/80 backdrop-blur-md text-purple-400 text-xs font-bold">Familia & Niños</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Juegos y Plazas Comunales</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+              Áreas de recreación infantil rodeadas de árboles de sombra, mobiliario urbano de madera y jardinería temática con cactáceas.
+            </p>
+            <span class="text-xs text-purple-400 font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-child-reaching"></i> Áreas de convivencia familiar
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN MASTER PLAN -->
+  <section id="masterplan" class="py-24 bg-gray-900/40 relative border-t border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <span class="text-brand-accent text-xs font-bold uppercase tracking-widest block mb-2">Planeación Urbana & Filosofía</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+            Master Plan diseñado para preservar un <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-emerald-300">legado</span>
+          </h2>
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 font-light">
+            El diseño urbano está pensado en <strong>ponerle fin a tres grandes vacíos</strong> del desarrollo tradicional:
+          </p>
+
+          <div class="space-y-3.5 mb-8">
+            <!-- Pilar 1 -->
+            <div class="p-4 rounded-2xl bg-gray-800/60 border border-white/5 hover:border-emerald-500/30 transition-colors">
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center shrink-0">1</span>
+                <h3 class="text-sm font-bold text-white tracking-wide uppercase">Integración <span class="text-emerald-400 font-normal">| El Pulmón Urbano</span></h3>
+              </div>
+              <p class="text-xs text-gray-300 pl-8.5 leading-relaxed">
+                Un ecosistema donde la infraestructura física y la naturaleza operan en un solo sistema.
+              </p>
+            </div>
+
+            <!-- Pilar 2 -->
+            <div class="p-4 rounded-2xl bg-gray-800/60 border border-white/5 hover:border-amber-500/30 transition-colors">
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center justify-center shrink-0">2</span>
+                <h3 class="text-sm font-bold text-white tracking-wide uppercase">Convivencia <span class="text-brand-accent font-normal">| La Tribu</span></h3>
+              </div>
+              <p class="text-xs text-gray-300 pl-8.5 leading-relaxed">
+                Espacios regenerativos diseñados antropológicamente para conectar con gente al igual que TÚ.
+              </p>
+            </div>
+
+            <!-- Pilar 3 -->
+            <div class="p-4 rounded-2xl bg-gray-800/60 border border-white/5 hover:border-indigo-500/30 transition-colors">
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <span class="w-6 h-6 rounded-full bg-indigo-500/20 text-indigo-400 text-xs font-bold flex items-center justify-center shrink-0">3</span>
+                <h3 class="text-sm font-bold text-white tracking-wide uppercase">Expansión <span class="text-indigo-300 font-normal">| Mente & Espíritu</span></h3>
+              </div>
+              <p class="text-xs text-gray-300 pl-8.5 leading-relaxed">
+                La mente y el espíritu expandidos al estar en contacto diario con un ecosistema vivo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
+            <img src="RM 4.jpg" alt="Vista aérea Master Plan Magnolia Urban Park" class="w-full h-[480px] object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/20 to-transparent"></div>
+            
+            <div class="absolute top-4 right-4 px-4 py-2 rounded-full bg-gray-950/80 backdrop-blur-md border border-white/10 text-xs text-gray-200 font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-plane-up text-brand-accent"></i>
+              <span>Vista Aérea del Master Plan</span>
+            </div>
+
+            <div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-gray-950/85 backdrop-blur-md border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <h4 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-tight">
+                  Conoce más sobre <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-emerald-300 to-green-400">el desarrollo</span>
+                </h4>
+                <p class="text-xs text-gray-300 mt-1 font-light">Descubre más detalles como: Secciones Viales, Zonas de Recreación, Manzanas y Tipos de Lotes.</p>
+              </div>
+              <a href="dossier.html" class="shrink-0 px-7 py-4 rounded-2xl bg-gradient-to-r from-brand-500 to-emerald-600 hover:from-brand-600 hover:to-emerald-700 text-white font-extrabold text-sm sm:text-base shadow-xl shadow-brand-500/30 border border-emerald-400/30 transition-all hover:scale-105 hover:shadow-brand-500/50 flex items-center gap-3 group">
+                <i class="fa-solid fa-book-open text-base group-hover:scale-110 transition-transform"></i>
+                <span>Da Click Aquí</span>
+                <i class="fa-solid fa-arrow-right text-xs text-emerald-200 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN REGISTRO RÁPIDO & ASESORÍA DIRECTA -->
+  <section class="py-14 sm:py-16 bg-gradient-to-r from-brand-900/40 via-gray-900 to-brand-900/40 border-t border-b border-brand-500/20 relative">
+    <div class="max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="px-6 sm:px-10 lg:px-12 py-12 sm:py-16 rounded-3xl bg-gray-950/95 backdrop-blur-xl border border-white/15 shadow-2xl relative overflow-hidden">
+        <!-- Resplandor decorativo sutil -->
+        <div class="absolute -right-16 -top-16 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-16 -bottom-16 w-64 h-64 bg-brand-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+          
+          <div class="lg:col-span-5">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent text-xs font-bold uppercase tracking-wider mb-3.5">
+              <i class="fa-solid fa-gem text-[10px]"></i> Registro de Inversionistas
+            </span>
+            <h3 class="text-2xl sm:text-3xl lg:text-[2rem] font-bold text-white tracking-tight leading-snug">
+              Recibe la lista de precios & disponibilidad de lotes
+            </h3>
+            <p class="text-gray-300 text-xs sm:text-sm mt-3.5 font-light leading-relaxed">
+              Completa tus datos para que un asesor te comparta la lista de precios por m², opciones de financiamiento y la ubicación de lotes frente a parque.
+            </p>
+            <div class="mt-7 flex flex-wrap items-center gap-3.5 text-xs font-medium text-gray-300">
+              <div class="flex items-center gap-1.5 bg-gray-900/80 px-3 py-1.5 rounded-lg border border-white/10">
+                <i class="fa-solid fa-shield-halved text-emerald-400"></i> Trato directo
+              </div>
+              <div class="flex items-center gap-1.5 bg-gray-900/80 px-3 py-1.5 rounded-lg border border-white/10">
+                <i class="fa-solid fa-clock text-amber-400"></i> Respuesta inmediata
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <form class="space-y-4 sm:space-y-4.5" onsubmit="event.preventDefault(); alert('¡Gracias! Hemos recibido tus datos. Un asesor de Magnolia Urban Park se comunicará contigo en breve.');">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Nombre Completo</label>
+                  <input type="text" required placeholder="Tu nombre" class="w-full px-4 py-3.5 rounded-xl bg-gray-900/90 border border-white/15 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent/40 transition-all shadow-inner">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Teléfono / WhatsApp</label>
+                  <input type="tel" required placeholder="+52 (55)..." class="w-full px-4 py-3.5 rounded-xl bg-gray-900/90 border border-white/15 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent/40 transition-all shadow-inner">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Correo Electrónico</label>
+                  <input type="email" required placeholder="tu@correo.com" class="w-full px-4 py-3.5 rounded-xl bg-gray-900/90 border border-white/15 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent/40 transition-all shadow-inner">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Interés Principal</label>
+                  <select class="w-full px-4 py-3.5 rounded-xl bg-gray-900/90 border border-white/15 text-white text-sm focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent/40 transition-all cursor-pointer shadow-inner">
+                    <option>Lotes Frente a Reserva / Arroyo (M-01 a M-09)</option>
+                    <option>Lotes Circuito Central & Fogateros (M-10 a M-18)</option>
+                    <option>Lotes Retornos y Conexión Comala (M-19 a M-27)</option>
+                    <option>Información y Cotización General</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-500 to-emerald-600 hover:from-brand-600 hover:to-emerald-700 text-white font-bold text-sm tracking-wide shadow-lg shadow-brand-500/25 transition-all hover:shadow-brand-500/40 hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+                Solicitar Cotización de Lote
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN AMENIDADES & VIDA NOCTURNA -->
+  <section id="amenidades" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-5xl mx-auto mb-16">
+        <span class="text-brand-accent text-xs sm:text-sm font-bold uppercase tracking-widest block mb-3">Experiencia Nocturna</span>
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+          Ambiente cálido <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-emerald-300 to-green-400">al anochecer</span>
+        </h2>
+        <p class="text-gray-300 text-base sm:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+          Cierra tu día con un momento de reconexión contigo mismo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Amenidad Noche 1 -->
+        <div class="relative rounded-3xl overflow-hidden border border-white/10 h-[400px] group">
+          <img src="RM 8.jpg" alt="Fire Pit Nocturno" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+          <div class="absolute bottom-8 left-8 right-8">
+            <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/30">Área Social & Fire Pits</span>
+            <h3 class="text-2xl font-bold text-white mt-3">Fogateros Comunales Circulares</h3>
+            <p class="text-gray-300 text-sm mt-2">
+              Espacios de reunión al aire libre rodeados de bancas semicirculares e iluminación focalizada para veladas inolvidables.
+            </p>
+          </div>
+        </div>
+
+        <!-- Amenidad Noche 2 -->
+        <div class="relative rounded-3xl overflow-hidden border border-white/10 h-[400px] group">
+          <img src="RM 7.jpg" alt="Iluminación nocturna de vialidades" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+          <div class="absolute bottom-8 left-8 right-8">
+            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30">Luminotecnia Urbana</span>
+            <h3 class="text-2xl font-bold text-white mt-3">Bolardos y Alumbrado Cálido</h3>
+            <p class="text-gray-300 text-sm mt-2">
+              Luminarias LED integradas a lo largo de banquetas y trotapistas que guían el recorrido con confort y tranquilidad visual.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA INTERACTIVA RENDERS (8 FOTOS) -->
+  <section id="galeria" class="py-24 bg-gray-900/60 relative border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-brand-accent text-xs font-bold uppercase tracking-widest block mb-2">Galería HD</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Explora los 8 renders fotorrealistas
+          </h2>
+        </div>
+
+        <!-- Filtros de Galería -->
+        <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="galleryFilters">
+          <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-xs font-bold bg-brand-500 text-white transition-all">Todas (8)</button>
+          <button data-filter="dia" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all">Día</button>
+          <button data-filter="atardecer" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all">Atardecer</button>
+          <button data-filter="noche" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all">Noche</button>
+          <button data-filter="aerea" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all">Aéreas</button>
+        </div>
+      </div>
+
+      <!-- GRID DE IMÁGENES -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="galleryGrid">
+        
+        <!-- Render 1 -->
+        <div class="gallery-item dia group cursor-pointer" data-src="RM 1.jpeg" data-title="RM 1 — Circuito Trotapista y Arbolado" data-category="Día / Peatonal">
+          <div class="relative rounded-2xl overflow-hidden h-64 border border-white/10 bg-gray-800">
+            <img src="RM 1.jpeg" alt="RM 1 Trotapista" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gray-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 bg-gray-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+              <div class="text-xs font-semibold text-white truncate">RM 1 — Trotapista & Arbolado</div>
+              <div class="text-[10px] text-brand-accent">Día</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Render 2 -->
+        <div class="gallery-item dia aerea group cursor-pointer" data-src="RM 2.jpg" data-title="RM 2 — Perspectiva Abierta hacia el Horizonte" data-category="Día / Panorámica">
+          <div class="relative rounded-2xl overflow-hidden h-64 border border-white/10 bg-gray-800">
+            <img src="RM 2.jpg" alt="RM 2 Vista Panorama" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gray-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 bg-gray-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+              <div class="text-xs font-semibold text-white truncate">RM 2 — Vista Panorama & Ciclistas</div>
+              <div class="text-[10px] text-brand-accent">Día</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Render 3 -->
+        <div class="gallery-item dia aerea group cursor-pointer" data-src="RM3.jpg" data-title="RM 3 — Vista Aérea Parque Infantil & Plaza" data-category="Día / Aérea">
+          <div class="relative rounded-2xl overflow-hidden h-64 border border-white/10 bg-gray-800">
+            <img src="RM3.jpg" alt="RM 3 Parque Infantil" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gray-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 bg-gray-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+              <div class="text-xs font-semibold text-white truncate">RM 3 — Parque Infantil & Plaza</div>
+              <div class="text-[10px] text-brand-accent">Día / Aérea</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Render 4 -->
+        <div class="gallery-item dia aerea group cursor-pointer" data-src="RM 4.jpg" data-title="RM 4 — Master Plan Cenital" data-category="Día / Master Plan">
+          <div class="relative rounded-2xl overflow-hidden h-64 border border-white/10 bg-gray-800">
+            <img src="RM 4.jpg" alt="RM 4 Master Plan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gray-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 bg-gray-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+              <div class="text-xs font-semibold text-white truncate">RM 4 — Master Plan Cenital</div>
+              <div class="text-[10px] text-brand-accent">Día / Aérea</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Render 5 -->
+        <div class="gallery-item dia aerea group cursor-pointer" data-src="RM 5.jpg" data-title="RM 5 — Retorno y Lomas Verdes" data-category="Día / Aérea">
+          <div class="relative rounded-2xl overflow-hidden h-64 border border-white/10 bg-gray-800">
+            <img src="RM 5.jpg" alt="RM 5 Retorno Verde" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gray-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 bg-gray-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+              <div class="text-xs font-semibold text-white truncate">RM 5 — Retorno & Lomas Verdes</div>
+              <div class="text-[10px] text-brand-accent">Día / Aérea</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Render 6 -->
+        <div class="gallery-item atardecer group cursor-pointer" data-src="RM 6.jpg" data-title="RM 6 — Textura Empedrado al Atardecer" data-category="Atardecer">
+          <div class="relative rounded-2xl overflow-hidden h-64 border border-white/10 bg-gray-800">
+            <img src="RM 6.jpg" alt="RM 6 Atardecer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gray-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 bg-gray-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+              <div class="text-xs font-semibold text-white truncate">RM 6 — Golden Hour & Piedra</div>
+              <div class="text-[10px] text-amber-400">Atardecer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Render 7 -->
+        <div class="gallery-item noche aerea group cursor-pointer" data-src="RM 7.jpg" data-title="RM 7 — Crepúsculo e Iluminación Nocturna" data-category="Noche / Aérea">
+          <div class="relative rounded-2xl overflow-hidden h-64 border border-white/10 bg-gray-800">
+            <img src="RM 7.jpg" alt="RM 7 Crepúsculo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gray-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 bg-gray-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+              <div class="text-xs font-semibold text-white truncate">RM 7 — Iluminación Crepuscular</div>
+              <div class="text-[10px] text-indigo-400">Noche / Aérea</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Render 8 -->
+        <div class="gallery-item noche aerea group cursor-pointer" data-src="RM 8.jpg" data-title="RM 8 — Fire Pit Nocturno Activo" data-category="Noche / Amenidad">
+          <div class="relative rounded-2xl overflow-hidden h-64 border border-white/10 bg-gray-800">
+            <img src="RM 8.jpg" alt="RM 8 Fire Pit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gray-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 bg-gray-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+              <div class="text-xs font-semibold text-white truncate">RM 8 — Fire Pit Encendido</div>
+              <div class="text-[10px] text-amber-400">Noche</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL LIGHTBOX PARA VER REPLICAS HD DE LOS RENDERS -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-gray-950/95 backdrop-blur-2xl flex items-center justify-center p-4 sm:p-8">
+    <button id="closeLightbox" class="absolute top-6 right-6 text-gray-400 hover:text-white text-3xl p-2 z-10 transition-colors">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    
+    <button id="prevLightbox" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl backdrop-blur-md z-10 transition-all">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <button id="nextLightbox" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl backdrop-blur-md z-10 transition-all">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="max-w-5xl w-full text-center">
+      <img id="lightboxImg" src="" alt="Render ampliado" class="max-h-[80vh] w-auto mx-auto rounded-2xl shadow-2xl border border-white/10 object-contain">
+      <div class="mt-4">
+        <h3 id="lightboxTitle" class="text-xl font-bold text-white"></h3>
+        <p id="lightboxCategory" class="text-xs text-brand-accent mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- SECCIÓN CONTACTO / COTIZADOR -->
+  <section id="contacto" class="py-24 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950 border border-white/10 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-brand-accent text-xs font-bold uppercase tracking-widest block mb-2">Agendar Visita / Asesoría</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Invierte en tu patrimonio en Magnolia Urban Park</h2>
+          <p class="text-gray-400 text-sm mt-2">Déjanos tus datos para enviarte el catálogo de disponibilidad, planes de financiamiento y agendar un recorrido presencial.</p>
+        </div>
+
+        <form id="contactForm" class="space-y-6 max-w-2xl mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Nombre Completo</label>
+              <input type="text" required placeholder="Ej. Carlos Mendoza" class="w-full px-4 py-3 rounded-xl bg-gray-800/80 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Correo Electrónico</label>
+              <input type="email" required placeholder="carlos@ejemplo.com" class="w-full px-4 py-3 rounded-xl bg-gray-800/80 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Teléfono / WhatsApp</label>
+              <input type="tel" required placeholder="+52 (55) 1234 5678" class="w-full px-4 py-3 rounded-xl bg-gray-800/80 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Interés Principal</label>
+              <select class="w-full px-4 py-3 rounded-xl bg-gray-800/80 border border-white/10 text-white focus:outline-none focus:border-brand-500 transition-colors">
+                <option value="lote">Lote Residencial</option>
+                <option value="inversion">Inversión Patrimonio</option>
+                <option value="informes">Información General</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Mensaje o Pregunta Adicional</label>
+            <textarea rows="3" placeholder="Me gustaría conocer la disponibilidad de lotes frente a parque..." class="w-full px-4 py-3 rounded-xl bg-gray-800/80 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-500 to-emerald-600 hover:from-brand-600 hover:to-emerald-700 text-white font-bold text-sm shadow-xl shadow-brand-500/20 transition-all hover:shadow-brand-500/40 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i>
+            Enviar Solicitud de Información
+          </button>
+        </form>
+
+        <div id="formSuccess" class="hidden text-center py-8">
+          <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mx-auto mb-4">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white">¡Solicitud Recibida!</h3>
+          <p class="text-gray-300 text-sm mt-2">Un asesor comercial de Magnolia Urban Park se pondrá en contacto contigo en breve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 bg-gray-950 border-t border-white/10 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="logo_arch_gold.png" alt="Magnolia Icon" class="h-9 w-auto object-contain">
+        <div class="flex flex-col">
+          <span class="text-base font-bold tracking-[0.2em] text-white font-serif leading-none">MAGNOLIA</span>
+          <span class="text-[8px] tracking-[0.3em] text-brand-accent uppercase font-semibold mt-1">RESIDENCIAL &bull; URBAN PARK</span>
+        </div>
+      </div>
+
+      <div class="text-xs text-gray-500 text-center md:text-left">
+        &copy; 2026 Magnolia Urban Park. Todos los derechos reservados. Las imágenes son renders fotorrealistas de carácter ilustrativo.
+      </div>
+
+      <div class="flex gap-4 text-gray-400">
+        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook text-lg"></i></a>
+        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

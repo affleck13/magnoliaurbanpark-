@@ -1,0 +1,112 @@
+/* Custom styles for Magnolia Urban Park */
+
+@keyframes subtleZoom {
+  0% {
+    transform: scale(1.02);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-subtle-zoom {
+  animation: subtleZoom 25s ease-in-out infinite alternate;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #234731;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d5a3f;
+}
+
+/* Radial Vignette for Hero */
+.bg-radial-vignette {
+  background: radial-gradient(circle at center, transparent 30%, rgba(3, 7, 18, 0.8) 100%);
+}
+
+/* Filter buttons active state */
+.filter-btn.active {
+  background-color: #2d5a3f !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(45, 90, 63, 0.4);
+}
+
+/* Lightbox Modal Animation */
+#lightboxModal {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#lightboxModal.hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+#lightboxModal:not(.hidden) {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* Animación de brillo degradado continuo para el titular */
+@keyframes gradientShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-shimmer {
+  background-size: 250% auto;
+  animation: gradientShimmer 5s ease-in-out infinite;
+}
+
+/* Efecto aura luminosa pulsante sutil */
+@keyframes glowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.25));
+  }
+  50% {
+    filter: drop-shadow(0 0 28px rgba(52, 211, 153, 0.55));
+  }
+}
+
+.animate-glow {
+  animation: glowPulse 4.5s ease-in-out infinite;
+}
+
+/* Animación de entrada suave hacia arriba */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

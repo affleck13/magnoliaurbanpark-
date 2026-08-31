@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dossier Técnico & Catálogo de Lotificación — Magnolia Urban Park</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo_arch_gold.png">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f4f7f4',
+              100: '#e3eae3',
+              500: '#2d5a3f',
+              600: '#234731',
+              700: '#1b3726',
+              800: '#14291c',
+              900: '#0e1c13',
+              accent: '#d4af37',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #090d16; }
+    ::-webkit-scrollbar-thumb { background: #234731; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #2d5a3f; }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- HEADER NAVEGACIÓN -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 backdrop-blur-md border-b border-white/10 py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <img src="logo_arch_gold.png" alt="Magnolia Icon" class="h-9 w-auto object-contain transform group-hover:scale-105 transition-transform drop-shadow-[0_2px_10px_rgba(212,175,55,0.4)]">
+        <div class="flex flex-col justify-center">
+          <span class="text-lg font-bold tracking-[0.2em] text-white font-serif leading-none group-hover:text-brand-accent transition-colors">MAGNOLIA</span>
+          <span class="text-[8px] tracking-[0.35em] text-brand-accent uppercase font-semibold mt-1">RESIDENCIAL &bull; URBAN PARK</span>
+        </div>
+      </a>
+
+      <!-- ACCIONES -->
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white text-xs font-semibold transition-all flex items-center gap-2">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span class="hidden sm:inline">Volver a la Portada</span>
+        </a>
+        <a href="#contacto-dossier" class="px-4 py-2 rounded-full bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold shadow-lg shadow-brand-500/20 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-file-signature"></i>
+          Solicitar Cotización
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO DE LA FICHA TÉCNICA -->
+  <section class="pt-32 pb-16 relative overflow-hidden bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="px-3 py-1 rounded-full bg-brand-500/20 border border-brand-accent/30 text-brand-accent text-xs font-bold tracking-wider uppercase">
+          <i class="fa-solid fa-book-open mr-1.5"></i> Dossier Técnico & Lotificación
+        </span>
+        <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+          <i class="fa-solid fa-location-dot mr-1"></i> Comala, Colima
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight font-serif">
+        Dossier Oficial de <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-emerald-300 to-green-400">Lotificación & Traza Urbana</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-gray-300 max-w-3xl font-light leading-relaxed mb-8">
+        Consulta la planimetría autorizada, dimensiones de manzana, especificaciones viales y áreas ecológicas protegidas de Magnolia Urban Park.
+      </p>
+
+      <!-- TARJETAS DE DATOS TÉCNICOS DESTACADOS -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="p-5 rounded-2xl bg-gray-900/80 border border-white/10 shadow-lg">
+          <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Manzanas Oficiales</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-white mt-1">27 <span class="text-xs text-brand-accent font-normal">Manzanas</span></div>
+          <div class="text-[11px] text-gray-400 mt-1">Subdivisión M-01 a M-27</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-gray-900/80 border border-white/10 shadow-lg">
+          <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Frente Típico de Lote</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 mt-1">10.00 <span class="text-xs font-normal">m</span></div>
+          <div class="text-[11px] text-gray-400 mt-1">Fondos de 20 m a 36.4 m</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-gray-900/80 border border-white/10 shadow-lg">
+          <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Andador / Trotapista</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 mt-1">3.00 <span class="text-xs font-normal">m</span></div>
+          <div class="text-[11px] text-gray-400 mt-1">Exclusivo peatonal y deportivo</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-gray-900/80 border border-white/10 shadow-lg">
+          <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Áreas Verdes (EV)</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-brand-accent mt-1">+5,844 <span class="text-xs font-normal">m²</span></div>
+          <div class="text-[11px] text-gray-400 mt-1">4 macrozonas de conservación</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN VISOR TÉCNICO INTERACTIVO -->
+  <section class="py-16 bg-gray-950 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+        <div>
+          <span class="text-brand-accent text-xs font-bold uppercase tracking-widest block mb-1">Planimetría Digital</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Visor Interactivo de Planos</h2>
+        </div>
+        <div class="flex items-center gap-2 mt-4 md:mt-0">
+          <a href="MAGNOLIAS LOTES.pdf" target="_blank" download="MAGNOLIAS_LOTES.pdf" class="px-4 py-2 rounded-xl bg-brand-500/20 hover:bg-brand-500/30 text-brand-accent border border-brand-accent/30 text-xs font-bold flex items-center gap-2 transition-all">
+            <i class="fa-solid fa-file-pdf"></i> PDF Lotificación (1.17 MB)
+          </a>
+          <a href="MAGNOLIAS Camino.pdf" target="_blank" download="MAGNOLIAS_Plano_Camino.pdf" class="px-4 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/30 text-xs font-bold flex items-center gap-2 transition-all">
+            <i class="fa-solid fa-file-pdf"></i> PDF Secciones Viales
+          </a>
+        </div>
+      </div>
+
+      <!-- VISOR CONTAINER -->
+      <div class="rounded-3xl overflow-hidden border border-white/15 bg-gray-900 shadow-2xl flex flex-col">
+        
+        <!-- TOOLBAR -->
+        <div class="p-3 sm:p-4 bg-gray-950/95 border-b border-white/10 flex flex-wrap items-center justify-between gap-3">
+          <div class="flex items-center gap-1.5 bg-gray-900 p-1 rounded-xl border border-white/10" id="dossierToggles">
+            <button type="button" data-view="lotes" class="dossier-toggle active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-brand-500 text-white transition-all flex items-center gap-1.5">
+              <i class="fa-solid fa-layer-group"></i>
+              <span>Plano de Lotificación</span>
+            </button>
+            <button type="button" data-view="traza" class="dossier-toggle px-3.5 py-1.5 rounded-lg text-xs font-bold bg-transparent text-gray-400 hover:text-white transition-all flex items-center gap-1.5">
+              <i class="fa-solid fa-road"></i>
+              <span>Secciones de Calle</span>
+            </button>
+            <button type="button" data-view="render" class="dossier-toggle px-3.5 py-1.5 rounded-lg text-xs font-bold bg-transparent text-gray-400 hover:text-white transition-all flex items-center gap-1.5">
+              <i class="fa-solid fa-cube"></i>
+              <span>Render 3D</span>
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <div class="flex items-center bg-gray-900 rounded-xl border border-white/10 p-1">
+              <button id="dossierZoomIn" type="button" class="w-8 h-8 rounded-lg hover:bg-white/10 text-gray-300 hover:text-white flex items-center justify-center text-xs">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <span id="dossierZoomLevel" class="text-xs font-mono font-semibold text-brand-accent px-2">100%</span>
+              <button id="dossierZoomOut" type="button" class="w-8 h-8 rounded-lg hover:bg-white/10 text-gray-300 hover:text-white flex items-center justify-center text-xs">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <button id="dossierZoomReset" type="button" class="w-8 h-8 rounded-lg hover:bg-white/10 text-gray-300 hover:text-white flex items-center justify-center text-xs ml-1" title="Centrar">
+                <i class="fa-solid fa-arrows-rotate"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEWPORT -->
+        <div id="dossierViewport" class="relative w-full h-[550px] sm:h-[650px] bg-[#f7f5ef] overflow-hidden cursor-grab active:cursor-grabbing select-none">
+          <div id="dossierWrapper" class="absolute origin-center will-change-transform w-full h-full flex items-center justify-center">
+            <img id="dossierImg" src="plano_lotificacion_web.png" alt="Plano Oficial" class="max-w-none w-[98%] h-auto object-contain pointer-events-none drop-shadow-md transition-opacity duration-200">
+          </div>
+
+          <div class="absolute bottom-4 left-4 z-10 px-3.5 py-2 rounded-xl bg-gray-950/85 backdrop-blur-md border border-white/10 text-xs text-gray-300 flex items-center gap-2 pointer-events-none shadow-lg">
+            <i class="fa-solid fa-hand text-brand-accent"></i>
+            <span>Arrastra para desplazarte &bull; Rueda del ratón para zoom</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE MANZANAS Y ESPECIFICACIONES -->
+  <section class="py-20 bg-gray-900/50 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-brand-accent text-xs font-bold uppercase tracking-widest block mb-2">Desglose de Lotes</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-serif">Catálogo de Manzanas Residenciales</h2>
+        <p class="text-gray-400 text-sm mt-3">
+          Resumen arquitectónico de las 27 manzanas planificadas con acceso inmediato a trotapistas, áreas verdes y retornos ajardinados.
+        </p>
+      </div>
+
+      <!-- GRID DE TARJETAS DE MANZANA -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card Zona 1 -->
+        <div class="p-6 rounded-3xl bg-gray-900/80 border border-white/10 hover:border-emerald-500/40 transition-all group">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold border border-emerald-500/30">
+              Sector Norte &bull; Frente Arroyo
+            </span>
+            <span class="text-xs text-gray-400 font-mono">M-01 a M-09</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">Manzanas Frente a Zona Federal</h3>
+          <p class="text-xs text-gray-300 leading-relaxed mb-6">
+            Lotes con vista despejada y colindancia a la reserva del arroyo. Máxima privacidad acústica y visual con orientación privilegiada.
+          </p>
+          <div class="space-y-2 pt-4 border-t border-white/5 text-xs">
+            <div class="flex justify-between text-gray-400"><span>Frente tipo:</span> <strong class="text-white">10.00 m</strong></div>
+            <div class="flex justify-between text-gray-400"><span>Fondos:</span> <strong class="text-white">20.00 m a 35.00 m</strong></div>
+            <div class="flex justify-between text-gray-400"><span>Superficie:</span> <strong class="text-emerald-400">200 m² a 350 m²</strong></div>
+          </div>
+          <a href="#contacto-dossier" class="mt-6 block text-center w-full py-2.5 rounded-xl bg-gray-800 hover:bg-emerald-600 text-white text-xs font-bold transition-colors">
+            Consultar Manzanas 1 a 9
+          </a>
+        </div>
+
+        <!-- Card Zona 2 -->
+        <div class="p-6 rounded-3xl bg-gray-900/80 border border-white/10 hover:border-amber-500/40 transition-all group">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/30">
+              Sector Central &bull; Zona de Cactus
+            </span>
+            <span class="text-xs text-gray-400 font-mono">M-10 a M-18</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">Manzanas Circuito Central & Parque</h3>
+          <p class="text-xs text-gray-300 leading-relaxed mb-6">
+            Ubicadas en el corazón del desarrollo, con salida peatonal inmediata a la Zona de Cactus, juegos infantiles y plazas con fogateros.
+          </p>
+          <div class="space-y-2 pt-4 border-t border-white/5 text-xs">
+            <div class="flex justify-between text-gray-400"><span>Frente tipo:</span> <strong class="text-white">10.00 m</strong></div>
+            <div class="flex justify-between text-gray-400"><span>Andador peatonal:</span> <strong class="text-white">3.00 m directo</strong></div>
+            <div class="flex justify-between text-gray-400"><span>Superficie:</span> <strong class="text-amber-400">200 m² a 320 m²</strong></div>
+          </div>
+          <a href="#contacto-dossier" class="mt-6 block text-center w-full py-2.5 rounded-xl bg-gray-800 hover:bg-amber-600 text-white text-xs font-bold transition-colors">
+            Consultar Manzanas 10 a 18
+          </a>
+        </div>
+
+        <!-- Card Zona 3 -->
+        <div class="p-6 rounded-3xl bg-gray-900/80 border border-white/10 hover:border-indigo-500/40 transition-all group">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-bold border border-indigo-500/30">
+              Sector Sur &bull; Conexión Comala
+            </span>
+            <span class="text-xs text-gray-400 font-mono">M-19 a M-27</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">Manzanas Retorno y Lomas</h3>
+          <p class="text-xs text-gray-300 leading-relaxed mb-6">
+            Próximas al acceso principal AC-05 (Lomas de la Higuera), ideales para quienes buscan conectividad ágil y topografía en pendiente suave.
+          </p>
+          <div class="space-y-2 pt-4 border-t border-white/5 text-xs">
+            <div class="flex justify-between text-gray-400"><span>Frente tipo:</span> <strong class="text-white">10.00 m</strong></div>
+            <div class="flex justify-between text-gray-400"><span>Sección vial:</span> <strong class="text-white">17.40 m empedrada</strong></div>
+            <div class="flex justify-between text-gray-400"><span>Superficie:</span> <strong class="text-indigo-400">200 m² a 360 m²</strong></div>
+          </div>
+          <a href="#contacto-dossier" class="mt-6 block text-center w-full py-2.5 rounded-xl bg-gray-800 hover:bg-indigo-600 text-white text-xs font-bold transition-colors">
+            Consultar Manzanas 19 a 27
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ESPECIFICACIONES DE CORTES VIALES -->
+  <section class="py-20 bg-gray-950 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-brand-accent text-xs font-bold uppercase tracking-widest block mb-2">Ingeniería Urbana</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-serif">Perfiles y Secciones de Calle</h2>
+        <p class="text-gray-400 text-xs sm:text-sm mt-2">Especificaciones de los 3 cortes de calle autorizados en la traza técnica.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-gray-900/60 border border-white/5">
+          <div class="text-xs font-bold text-brand-accent uppercase">Calle CD-C (Distribución)</div>
+          <div class="text-2xl font-extrabold text-white mt-1 mb-3">17.40 Metros</div>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Andador / Trotapista: <strong>3.00 m</strong></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Carril de circulación: <strong>3.00 m</strong></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Carril de estacionamiento: <strong>2.50 m</strong></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Acera / Camellón: <strong>2.00 m a 2.40 m</strong></li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gray-900/60 border border-white/5">
+          <div class="text-xs font-bold text-emerald-400 uppercase">Arteria AC (Colectora Menor)</div>
+          <div class="text-2xl font-extrabold text-white mt-1 mb-3">17.00 Metros</div>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Carriles vehiculares: <strong>3.30 m c/u</strong></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Carril estacionamiento: <strong>2.40 m</strong></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Aceras arboladas: <strong>2.80 m</strong></li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gray-900/60 border border-white/5">
+          <div class="text-xs font-bold text-indigo-400 uppercase">Calle Local (Intensidad B)</div>
+          <div class="text-2xl font-extrabold text-white mt-1 mb-3">12.00 Metros</div>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 2 Carriles de circulación: <strong>3.00 m c/u</strong></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Carril estacionamiento: <strong>2.40 m</strong></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Aceras peatonales: <strong>1.80 m</strong></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE CONTACTO / FICHA FORMAL -->
+  <section id="contacto-dossier" class="py-20 bg-gray-900/80 border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-8 sm:p-12 rounded-3xl bg-gray-950 border border-white/10 shadow-2xl text-center">
+        
+        <span class="text-brand-accent text-xs font-bold uppercase tracking-widest block mb-2">Atención a Inversionistas</span>
+        <h2 class="text-3xl font-extrabold text-white mb-3 font-serif">Solicitar Disponibilidad & Cotización de Lote</h2>
+        <p class="text-xs sm:text-sm text-gray-400 max-w-xl mx-auto mb-8">
+          Déjanos tus datos para enviarte la lista de precios por m², catálogo de lotes disponibles por manzana y plan de financiamiento.
+        </p>
+
+        <form class="space-y-4 max-w-xl mx-auto text-left" onsubmit="event.preventDefault(); alert('¡Gracias! Un asesor de Magnolia Urban Park te contactará con la cotización solicitada.');">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 uppercase mb-1.5">Nombre Completo</label>
+              <input type="text" required placeholder="Tu nombre" class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-white/10 text-white text-xs focus:outline-none focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 uppercase mb-1.5">Teléfono / WhatsApp</label>
+              <input type="tel" required placeholder="+52 55..." class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-white/10 text-white text-xs focus:outline-none focus:border-brand-500">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 uppercase mb-1.5">Manzana de Interés</label>
+            <select class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-white/10 text-white text-xs focus:outline-none focus:border-brand-500">
+              <option>Sector Norte (Manzanas 1 a 9 - Frente Arroyo / Reserva)</option>
+              <option>Sector Central (Manzanas 10 a 18 - Zona de Cactus & Parques)</option>
+              <option>Sector Sur (Manzanas 19 a 27 - Retornos y Conexión Comala)</option>
+              <option>Cualquier Manzana / Asesoría General</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2 mt-4">
+            <i class="fa-solid fa-paper-plane"></i>
+            Enviar Solicitud
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 bg-gray-950 border-t border-white/10 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <img src="logo_arch_gold.png" class="h-6 w-auto">
+        <span class="font-serif font-bold text-white tracking-wider">MAGNOLIA URBAN PARK</span>
+      </div>
+      <div>&copy; 2026 Magnolia Urban Park &bull; Todos los derechos reservados.</div>
+      <a href="index.html" class="text-brand-accent hover:underline">Volver a la Portada</a>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DEL VISOR DE PLANOS EN DOSSIER -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const viewport = document.getElementById('dossierViewport');
+      const wrapper = document.getElementById('dossierWrapper');
+      const img = document.getElementById('dossierImg');
+      const zoomLevel = document.getElementById('dossierZoomLevel');
+      const zoomIn = document.getElementById('dossierZoomIn');
+      const zoomOut = document.getElementById('dossierZoomOut');
+      const zoomReset = document.getElementById('dossierZoomReset');
+      const toggles = document.querySelectorAll('.dossier-toggle');
+
+      let scale = 1;
+      let translateX = 0;
+      let translateY = 0;
+      let isDragging = false;
+      let startX = 0;
+      let startY = 0;
+
+      const updateTransform = () => {
+        wrapper.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+        if (zoomLevel) zoomLevel.textContent = `${Math.round(scale * 100)}%`;
+      };
+
+      const zoom = (delta, centerX = null, centerY = null) => {
+        const prevScale = scale;
+        scale = Math.min(Math.max(0.6, scale + delta), 4.5);
+        if (centerX !== null && centerY !== null) {
+          const rect = viewport.getBoundingClientRect();
+          const mouseX = centerX - rect.left - rect.width / 2;
+          const mouseY = centerY - rect.top - rect.height / 2;
+          translateX -= (mouseX - translateX) * (scale / prevScale - 1);
+          translateY -= (mouseY - translateY) * (scale / prevScale - 1);
+        }
+        updateTransform();
+      };
+
+      const reset = () => {
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+        updateTransform();
+      };
+
+      if (zoomIn) zoomIn.addEventListener('click', () => zoom(0.35));
+      if (zoomOut) zoomOut.addEventListener('click', () => zoom(-0.35));
+      if (zoomReset) zoomReset.addEventListener('click', reset);
+
+      viewport.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const delta = e.deltaY < 0 ? 0.25 : -0.25;
+        zoom(delta, e.clientX, e.clientY);
+      }, { passive: false });
+
+      viewport.addEventListener('mousedown', (e) => {
+        if (e.target.closest('button')) return;
+        isDragging = true;
+        startX = e.clientX - translateX;
+        startY = e.clientY - translateY;
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        translateX = e.clientX - startX;
+        translateY = e.clientY - startY;
+        updateTransform();
+      });
+
+      window.addEventListener('mouseup', () => { isDragging = false; });
+
+      // Touch
+      let touchStartDist = 0;
+      viewport.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          isDragging = true;
+          startX = e.touches[0].clientX - translateX;
+          startY = e.touches[0].clientY - translateY;
+        } else if (e.touches.length === 2) {
+          isDragging = false;
+          touchStartDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+        }
+      }, { passive: true });
+
+      viewport.addEventListener('touchmove', (e) => {
+        if (isDragging && e.touches.length === 1) {
+          translateX = e.touches[0].clientX - startX;
+          translateY = e.touches[0].clientY - startY;
+          updateTransform();
+        } else if (e.touches.length === 2) {
+          const dist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+          if (touchStartDist > 0) {
+            zoom((dist - touchStartDist) * 0.005);
+            touchStartDist = dist;
+          }
+        }
+      }, { passive: true });
+
+      viewport.addEventListener('touchend', () => { isDragging = false; });
+
+      // Capas
+      toggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+          toggles.forEach(b => {
+            b.classList.remove('active', 'bg-brand-500', 'text-white');
+            b.classList.add('bg-transparent', 'text-gray-400');
+          });
+          btn.classList.add('active', 'bg-brand-500', 'text-white');
+          btn.classList.remove('bg-transparent', 'text-gray-400');
+
+          const view = btn.getAttribute('data-view');
+          if (view === 'lotes') {
+            img.src = 'plano_lotificacion_web.png';
+            viewport.style.backgroundColor = '#f7f5ef';
+          } else if (view === 'traza') {
+            img.src = 'plano_tecnico_magnolias.png';
+            viewport.style.backgroundColor = '#f7f5ef';
+          } else {
+            img.src = 'RM 4.jpg';
+            viewport.style.backgroundColor = '#0b1329';
+          }
+          reset();
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>
